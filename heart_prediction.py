@@ -90,7 +90,7 @@ thal = st.selectbox("地中海贫血 (thal):", options=list(thal_options.keys())
 feature_values = [age, sex, cp, trestbps, chol, fbs, restecg, thalach, exang, oldpeak, slope, ca, thal]
 features = np.array([feature_values])
 
-if st.button("Predict"):
+if st.button("点击预测"):
     # 预测类别和概率
     predicted_class = model.predict(features)[0]
     predicted_proba = model.predict_proba(features)[0]
