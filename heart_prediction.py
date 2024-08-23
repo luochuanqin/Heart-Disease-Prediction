@@ -45,7 +45,7 @@ feature_names = [
 ]
 
 # 使用者界面
-st.title("心脏病预测")
+st.title("基于XGBoost算法的心脏病预测")
 
 # 年龄: 数值型输入
 age = st.number_input("年龄:", min_value=1, max_value=120, value=50)
