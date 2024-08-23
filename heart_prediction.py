@@ -63,7 +63,7 @@ trestbps = st.number_input("静息血压 (trestbps):", min_value=50, max_value=2
 chol = st.number_input("血清胆固醇 mg/dl (chol):", min_value=100, max_value=600, value=200)
 
 # fbs: 类别型输入
-fbs = st.selectbox("空腹血糖 > 120 mg/dl (fbs):", options=[0, 1], format_func=lambda x: 'False (0)' if x == 0 else 'True (1)')
+fbs = st.selectbox("空腹血糖 > 120 mg/dl (fbs):", options=[0, 1], format_func=lambda x: '不是 (0)' if x == 0 else '是的 (1)')
 
 # restecg: 类别型输入
 restecg = st.selectbox("静息心电图(ECG)结果:", options=list(restecg_options.keys()), format_func=lambda x: restecg_options[x])
@@ -72,7 +72,7 @@ restecg = st.selectbox("静息心电图(ECG)结果:", options=list(restecg_optio
 thalach = st.number_input("最大心率 (thalach):", min_value=50, max_value=250, value=150)
 
 # exang: 类别型输入
-exang = st.selectbox("运动型心绞痛 (exang):", options=[0, 1], format_func=lambda x: 'No (0)' if x == 0 else 'Yes (1)')
+exang = st.selectbox("运动型心绞痛 (exang):", options=[0, 1], format_func=lambda x: '不是 (0)' if x == 0 else '是的 (1)')
 
 # oldpeak: 数值型输入
 oldpeak = st.number_input("运动状态下ST下降的值 (oldpeak):", min_value=0.0, max_value=10.0, value=1.0)
